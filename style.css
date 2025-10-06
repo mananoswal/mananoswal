@@ -1,1 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+}
 
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #3498db;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #2980b9;
+}
+
+main {
+    padding: 20px;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: #3498db;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+}
