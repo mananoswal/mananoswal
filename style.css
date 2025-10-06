@@ -3,91 +3,92 @@ body {
     color: #333;
     background-color: #f4f4f8;
     margin: 0;
-    line-height: 1.6;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 header {
     text-align: center;
-    padding: 40px;
-    background: linear-gradient(135deg, #3498db, #2ecc71);
+    padding: 50px;
+    background: linear-gradient(45deg, #4caf50, #8bc34a);
     color: white;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #3498db;
-}
-
-nav a {
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #2980b9;
 }
 
 main {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     animation: fadeIn 1s ease;
 }
 
 .section {
-    margin: 40px 0;
     padding: 20px;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .section:hover {
-    transform: scale(1.02);
+    transform: translateY(-10px);
 }
 
 .section-title {
-    color: #3498db;
-    font-size: 1.75em;
-    margin-bottom: 15px;
+    color: #4caf50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
     position: relative;
 }
 
-.section-title::after {
+.section-title::before {
     content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #2ecc71;
     position: absolute;
-    left: 0;
+    width: 50px;
+    height: 5px;
+    background-color: #8bc34a;
     bottom: -5px;
+    left: 0;
 }
 
 .card {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #8bc34a;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #3498db;
+    background-color: #4caf50;
     color: white;
+}
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #388e3c;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
