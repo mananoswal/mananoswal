@@ -1,55 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Manan Oswal</h1>
-        <p>Consultant | Strategy | Growth</p>
-    </header>
-    <main>
-        <section id="about" class="section">
-            <h2 class="section-title">About Me</h2>
-            <p>Hello! I'm Manan, an upcoming consultant specializing in providing strategic solutions and insights to optimize business processes and drive innovation.</p>
-        </section>
-        <section id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
-            <div class="card">
-                <h3>Market Research and Study Intern</h3>
-                <p>EY-Parthenon</p>
-                <p>Conducted product-market fit analysis and market mapping across 7+ Tier-2 and Tier-3 cities, accurately identifying regions that enabled a 20% rise in expansion opportunities for a premium motorcycle brand.</p>
-                <p>Engaged with 500+ prospective dealer partners, ultimately shortlisting and converting 80 of them for strategic discussions with senior leadership, aimed at validating and refining market entry strategies. </p>
-            </div>
-        </section>
-        <section id="live project" class="section">
-            <h2 class="section-title">Live Projects</h2>
-            <div class="card">
-                <h3>GTM Strategy Head</h3>
-                <p>Marbles Health</p>
-                <p>Directed a team of 8 consultants to design the B2B go-to-market strategy for Marbles Health’s EASE headset, an innovative tDCS-based device addressing depression, and wider mental health disorders.</p>
-                <p>Built clear launch pathways by engaging with 5+ leading hospital chains and connecting with 100+ psychologists through CME-linked engagement models to drive awareness, adoption, and long-term scale. </p>
-        </section>
-        <section id="position of responsibilities" class="section">
-            <h2 class="section-title">Position of Responsibilities</h2>
-            <div class="card">
-                <h3>Social Media Head</h3>
-                <p>180Degrees Consulting SBS College</p>
-                <p>Led a team of 10+ members to create, curate, and schedule engaging content across multiple platforms, ensuring consistent brand messaging and driving a 35% growth in overall digital reach over six months.</p>
-                <p>Implemented a comprehensive media strategy for flagship event Impact Genesis, successfully driving 1,600+ registrations and boosting audience engagement levels by nearly 50% within a short timeframe.</p>
-        </section>
-        <section id="contact" class="section">
-            <h2 class="section-title">Contact</h2>
-            <p>Email: mananoswal2@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mananoswal" target="_blank" rel="noopener noreferrer">linkedin.com/in/mananoswal</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Manan Oswal</p>
-    </footer>
-</body>
-</html>
+/* === Global Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8f0f9, #ffffff);
+  color: #222;
+  margin: 0;
+  line-height: 1.6;
+  animation: fadeInBody 1s ease forwards;
+}
+
+/* === Header === */
+header {
+  text-align: center;
+  padding: 70px 20px 40px;
+  background: linear-gradient(120deg, #003366, #007c91);
+  color: #fff;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* === Main Sections === */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 10px 25px;
+}
+
+/* === Section Title === */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #003366;
+  position: relative;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #007c91, #00bcd4);
+  bottom: 0;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* === Sections === */
+.section {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 6px 18px rgba(0, 60, 100, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease forwards;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 80, 130, 0.15);
+}
+
+/* === Cards inside each section === */
+.card {
+  background: #f9fcff;
+  border-left: 5px solid #00a7b3;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  background: #eefaff;
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  color: #005f73;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* === Contact Section === */
+#contact a {
+  color: #007c91;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#contact a:hover {
+  color: #004d61;
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #003366;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* === Animations === */
+@keyframes fadeInBody {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+}
